@@ -17,10 +17,16 @@ function ProductList() {
    },[])
 
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid' style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(18rem, 1fr))', gap: '1rem', padding: '1rem' }} >
        {products.length > 0 ? (
                 products.map((product) => (
-                    <Cards />
+                    <Cards 
+                        key={product.id}
+                        title={product.title}
+                        description={product.description}
+                        image={product.image}
+                        price={product.price}
+                    />
                 ))
             ) : (
                 <p>Loading products...</p>
