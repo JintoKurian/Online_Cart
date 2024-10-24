@@ -2,7 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function Card() {
+function Cards() {
     return (
         <div>
             <Card style={{ width: '18rem' }}>
@@ -20,4 +20,4 @@ function Card() {
     )
 }
 
-export default Card
+export default Cards
