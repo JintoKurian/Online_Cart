@@ -8,6 +8,7 @@ function ProductList() {
     const [modalShow, setModalShow] = useState(false);
     const [selectedProductId, setSelectedProductId] = useState(null);
 
+
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products')
             .then(response => setProducts(response.data))
@@ -18,6 +19,8 @@ function ProductList() {
         setSelectedProductId(productId);
         setModalShow(true);
     };
+
+ 
 
     return (
         <div className='container-fluid' style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(18rem, 1fr))', gap: '1rem', padding: '1rem' }}>
